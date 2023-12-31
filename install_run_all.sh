@@ -14,7 +14,7 @@ if [[ !(-z "UnrealDir") ]]; then
 fi
 
 # Install Unreal Engine
-./install_unreal.sh $1
+./install_unreal.sh $UnrealDir
 
 #install airsim
 ./setup.sh
