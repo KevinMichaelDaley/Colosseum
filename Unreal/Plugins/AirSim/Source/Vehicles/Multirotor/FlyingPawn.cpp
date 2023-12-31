@@ -3,12 +3,18 @@
 #include "AirBlueprintLib.h"
 #include "common/CommonStructs.hpp"
 #include "common/Common.hpp"
+TArray<APawn*> AFlyingPawn::Instances;
 
 AFlyingPawn::AFlyingPawn()
 {
     init_id_ = pawn_events_.getActuatorSignal().connect_member(this, &AFlyingPawn::initializeRotors);
     pawn_events_.getActuatorSignal().connect_member(this, &AFlyingPawn::setRotorSpeed);
 }
+
+TArray<APawn*> AFlyingPawn::GetInstances(){
+    return Instances;
+}
+
 
 void AFlyingPawn::BeginPlay()
 {
