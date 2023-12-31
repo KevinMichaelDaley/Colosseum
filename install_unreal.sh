@@ -1,5 +1,5 @@
 #! /bin/bash
-cd $1
+cd UnrealEngine
 ./Setup.sh
 ./GenerateProjectFiles.sh
 make
