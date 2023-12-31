@@ -13,6 +13,7 @@
 UCLASS()
 class AIRSIM_API AFlyingPawn : public APawn
 {
+    static TArray<APawn*> GetInstances();
     GENERATED_BODY()
 
 public:
@@ -55,4 +56,7 @@ private: //variables
 
     MultirotorPawnEvents pawn_events_;
     int init_id_;
+
+    static TArray<APawn*> Instances;
+
 };
